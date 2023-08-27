@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Page Survey</title>
+</head>
+<body>
+  <h2>Page 2</h2>
+  <form action="save.php" method="post">
+    <?php
+      if(isset($_POST['name'])) {
+        echo '<input type="hidden" name="name" value="' . $_POST['name'] . '">';
+      }
+    ?>
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" required>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
